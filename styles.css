@@ -112,12 +112,7 @@ body {
     font-size: 1rem;
 }
 
-.profile-time {
-    font-size: 0.875rem;
-    color: #4285f4;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
+
 
 .social-links {
     display: flex;
