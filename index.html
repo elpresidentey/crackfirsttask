@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <article class="profile-card" data-testid="test-profile-card">
+        <div class="profile-content">
+            <header class="profile-header">
+                <h2 class="profile-name" data-testid="test-user-name">Iduwe Ekene Leonard</h2>
+                <p class="profile-bio" data-testid="test-user-bio">
+                    Passionate frontend developer with a love for creating beautiful, accessible web experiences. 
+                    When not coding, you can find me hiking in the mountains or reading sci-fi novels.
+                </p>
+                <div class="profile-time" data-testid="test-user-time"></div>
+            </header>
+
+            <section class="profile-hobbies" data-testid="test-user-hobbies">
+                <h3>Hobbies</h3>
+                <ul>
+                    <li>Hiking</li>
+                    <li>Photography</li>
+                    <li>Reading</li>
+                    <li>Open Source</li>
+                </ul>
+            </section>
+
+            <section class="profile-dislikes" data-testid="test-user-dislikes">
+                <h3>Dislikes</h3>
+                <ul>
+                    <li>Traffic jams</li>
+                    <li>Broken code</li>
+                    <li>Loud noises</li>
+                </ul>
+            </section>
+
+            <nav class="social-links" data-testid="test-user-social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+                   data-testid="test-user-social-github">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                   data-testid="test-user-social-twitter">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                   data-testid="test-user-social-linkedin">LinkedIn</a>
+            </nav>
+        </div>
+
+        <figure class="profile-avatar">
+            <img 
+                src="./albert-dera-ILip77SbmOE-unsplash.jpg" 
+                alt="Profile picture of Iduwe Ekene Leonard"
+                data-testid="test-user-avatar"
+                class="avatar-image">
+            <figcaption>Iduwe Ekene Leonard</figcaption>
+        </figure>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
