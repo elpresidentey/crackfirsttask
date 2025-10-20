@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +7,291 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Cabin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #4285f4;
+    background: rgba(66, 133, 244, 0.1);
+}
+
+.nav-link.active {
+    color: #4285f4;
+    background: rgba(66, 133, 244, 0.15);
+    font-weight: 600;
+}
+
+/* Page-specific layouts */
+.contact-page,
+.about-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-container,
+.about-container {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    padding: 48px;
+    width: 100%;
+}
+
+/* Page Headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background: #fafbfc;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #4285f4;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: #ea4335;
+    background: #fef7f7;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.submit-btn:hover {
+    background: #3367d6;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Error Messages */
+.error-message {
+    color: #ea4335;
+    font-size: 0.875rem;
+    margin-top: 8px;
+    display: none;
+    font-weight: 500;
+}
+
+/* Success Message */
+.success-message {
+    background: #e8f5e8;
+    border: 2px solid #34a853;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.success-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.success-icon {
+    background: #34a853;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.success-message p {
+    color: #1a1a1a;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* About Page Styles */
+.about-section {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e1e5e9;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.about-section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.about-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4285f4;
+    margin: 24px 0 12px 0;
+    line-height: 1.4;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.about-section ul {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.about-section li {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.about-section strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.future-note {
+    background: #f8f9fa;
+    border-left: 4px solid #4285f4;
+    padding: 24px;
+    border-radius: 0 12px 12px 0;
+    margin: 24px 0;
+}
+
+.future-note p {
+    margin-bottom: 12px;
+}
+
+.future-note em {
+    color: #4285f4;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .profile-card {
@@ -35,9 +315,10 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     border: 4px solid #4285f4;
     box-shadow: 0 8px 24px rgba(66, 133, 244, 0.2);
+    background: #f8f9fa;
 }
 
 .status-indicator {
@@ -138,7 +419,104 @@ body {
     color: #4285f4;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+    
+    .main-nav {
+        padding: 12px 16px;
+        gap: 16px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+    }
+    
+    .nav-link {
+        font-size: 0.875rem;
+        padding: 6px 12px;
+    }
+    
+    .contact-container,
+    .about-container {
+        padding: 32px 24px;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1rem;
+    }
+    
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-section h3 {
+        font-size: 1.125rem;
+    }
+}
+
 @media (max-width: 480px) {
+    .main-nav {
+        padding: 8px 12px;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    
+    .contact-container,
+    .about-container {
+        padding: 24px 16px;
+        margin: 8px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .page-header p {
+        font-size: 0.95rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+    
+    .submit-btn {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+    
+    .about-section {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+    }
+    
+    .about-section h2 {
+        font-size: 1.375rem;
+    }
+    
+    .about-section h3 {
+        font-size: 1rem;
+    }
+    
+    .about-section p,
+    .about-section li {
+        font-size: 0.95rem;
+    }
+    
+    .future-note {
+        padding: 16px;
+    }
+    
     .profile-card {
         padding: 32px 24px;
         margin: 16px;
